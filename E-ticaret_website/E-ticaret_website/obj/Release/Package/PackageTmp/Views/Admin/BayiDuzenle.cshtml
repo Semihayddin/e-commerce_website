@@ -1,0 +1,85 @@
+﻿@using EntityFrameworkLibrary;
+@using BusinessLibrary;
+@using ElektronikMagazaWebsite.Controllers;
+@using ElektronikMagazaWebsite.Models;
+
+@{
+    ViewBag.Title = "BayiDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model PageItem
+
+
+<div id="content" class="p-4 p-md-5 pt-5" style="background-color: lightgray;">
+    @using (Html.BeginForm("BayiIslem", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+
+        <div class="form-group row">
+            <label for="BayiKod" class="col-4 col-form-label">Bayi Kodunu Giriniz</label>
+            <div class="col-8">
+                <input class="form-control" type="hidden" id="BayiID" name="BayiID" placeholder="Bayi ID" value="@Model.bayi.BayiID" />
+                <input class="form-control" id="BayiKod" name="BayiKod" required placeholder="Bayi Kodunu Giriniz" value="@Model.bayi.BayiKod" />
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="BayiUnvan" class="col-4 col-form-label">Bayi Unvanı</label>
+            <div class="col-8">
+
+                <input class="form-control" id="BayiUnvan" name="BayiUnvan" required placeholder="Bayi Unvanını Giriniz" value="@Model.bayi.BayiUnvan" />
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="BayiYetkiliKisi" class="col-4 col-form-label">Bayi Unvanı</label>
+            <div class="col-8">
+
+                <input class="form-control" id="BayiYetkiliKisi" name="BayiYetkiliKisi" required placeholder="Bayi Yetkili Kişisini Giriniz" value="@Model.bayi.BayiYetkiliKisi" />
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="BayiSifre" class="col-4 col-form-label">Bayi Şifresi</label>
+            <div class="col-8">
+
+                <input class="form-control" id="BayiSifre" name="BayiSifre" required placeholder="Bayi Şifresini Giriniz" value="@Model.bayi.BayiSifre" />
+
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <div class="offset-4 col-8">
+                <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    }
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#baslik").live("keyup", function () {
+
+            str = $(this).val();
+            str = replaceSpecialChars(str);
+            str = str.toLowerCase();
+
+            function replaceSpecialChars(str) {
+                var specialChars = [["ş", "s"], ["ğ", "g"], ["ü", "u"], ["ı", "i"], ["_", "-"],
+                ["ö", "o"], ["Ş", "S"], ["Ğ", "G"], ["Ç", "C"], ["ç", "c"],
+                ["Ü", "U"], ["İ", "I"], ["Ö", "O"], ["ş", "s"]];
+
+                for (var i = 0; i < specialChars.length; i++) {
+                    str = str.replace(eval("/" + specialChars[i][0] + "/ig"), specialChars[i][1]);
+                }
+                return str;
+            }
+            $("#baslik").val(str);
+        });
+    });
+
+</script>
+
+
+

@@ -1,0 +1,79 @@
+﻿@using ElektronikMagazaWebsite.Controllers;
+@using EntityFrameworkLibrary;
+@using BusinessLibrary;
+@using ElektronikMagazaWebsite.Models;
+@model PageItem
+@{
+    ViewBag.Title = "Kategoriler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var listeurunler = UiData.GetUrunler();
+
+}
+<div class="page-heading" id="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="inner-content">
+                    <h2>@Model.kategori.KategoriAdi Ürünlerini İnceleyin</h2>
+                    <span><a href="/" style="color:white">Anasayfa</a> ></span><span> Kategoriler > </span> <span> @Model.kategori.KategoriAdi</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="section" id="products">
+    <div class="container">
+        <div class="row">
+            @if (Model.urunler.Any())
+            {
+                foreach (var item in Model.urunler)
+                {
+                    <div class="col-lg-4">
+                        <div class="item">
+                            <div class="thumb">
+                                <div class="hover-content">
+                                    <ul>
+                                        <li><a href="/urun-detayi/@UrlHelper_.FriendlyURLTitle(@item.UrunAdi)-@item.UrunID"><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="javascript:void(0)" onclick="sepeteEkle(@item.UrunID)"><i class="fa fa-shopping-cart"></i></a></li>
+
+
+                                    </ul>
+                                </div>
+                                <img src="../@item.UrunResimUrl1" alt="">
+                            </div>
+                            <div class="down-content">
+                                <h4>@item.UrunAdi</h4>
+                                <span>@item.UrunFiyat.ToString("C2")</span>
+
+                                @if (item.UrunPopuler == true)
+                                {
+                                    <span class="badge-secondary" style="background-color: #d11313; color: white; padding: 5px 10px; font-size: 14px; border-radius: 12px; font-weight: bold; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); display: inline-block;">Popüler Ürün</span>
+
+                                }
+                                else
+                                {
+                                    <span></span>
+                                }
+                                @if (item.UrunYeni == true)
+                                {
+                                    <span class="badge-secondary" style="background-color: #1e78c8; color: white; padding: 5px 10px; font-size: 14px; border-radius: 12px; font-weight: bold; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); display: inline-block;">Yeni Ürün</span>
+
+                                }
+                                else
+                                {
+                                    <span></span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                }
+            }
+            else
+            {
+                <h4 class="post-title"><a href="/">Kayıt yok</a></h4>
+            }
+        </div>
+    </div>
+</section>
+

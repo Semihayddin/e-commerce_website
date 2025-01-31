@@ -1,0 +1,53 @@
+﻿@using EntityFrameworkLibrary;
+@using BusinessLibrary;
+@using ElektronikMagazaWebsite.Controllers;
+@using ElektronikMagazaWebsite.ViewModel;
+
+@model AdminSiparisler
+@{
+    ViewBag.Title = "Siparisler";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div id="content" class="p-4 p-md-5 pt-5">
+    <h2 class="mb-1">Siparişler</h2>
+    <form action="/Admin/Siparisler" method="get">
+        <div class="d-flex">
+            @Html.TextBoxFor(a => a.Aranan, new { @class = "form-control ", @type = "text", @style = "width:50%;border:1px solid black !important" })
+            @Html.TextBoxFor(a => a.tarih1, new { @class = "form-control ", @type = "date", @style = "width:25%;border:1px solid black !important" })
+            @Html.TextBoxFor(a => a.tarih2, new { @class = "form-control ", @type = "date", @style = "width:25%;border:1px solid black !important" })
+         
+
+            <button type="submit" class="btn btn-danger">Ara</button>
+        </div>
+        <table id="example" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Sipariş Id</th>
+                    <th>Bayi Kodu</th>
+                    <th>Sipariş Tutarı</th>
+                    <th>Sipariş Tarihi</th>
+                    <th>İnceleme</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (SiparisKart item in Model.Liste)
+                {
+                    <tr>
+                        <td class="text-left" style="padding:0.3rem !important">@item.SiparisKartID</td>
+                        <td style="padding:0.3rem !important">@item.bayiKod</td>
+                        <td style="padding:0.3rem !important">@item.SiparisKartTutar</td>
+                        <td style="padding:0.3rem !important">@item.SiparisKartTarih</td>
+                        <td style="padding:0.3rem !important"><a class="btn btn-warning" href="@Url.Action("SiparisIncele","Admin",new  {id=item.SiparisKartID })">İnceleme</a></td>
+
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+        <span>Filtre Sonucu Oluşan Toplam Tutar : @Model.Liste.Sum(x => x.SiparisKartTutar)  </span><br />
+        <span>@Model.Liste.Count(x => x.SiparisKartID > 0)  Kayıt Bulundu</span>
+    </form>
+</div>
+

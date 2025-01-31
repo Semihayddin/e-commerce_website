@@ -1,0 +1,41 @@
+﻿@using EntityFrameworkLibrary;
+@using BusinessLibrary;
+@using ElektronikMagazaWebsite.Controllers;
+
+@model List<Kategoriler>
+
+@{
+    ViewBag.Title = "Kategoriler";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div id="content" class="p-4 p-md-5 pt-5">
+    <h2 class="mb-1">Kategoriler</h2>
+    <a class="btn btn-success text-white float-right mb-4" href="@Url.Action("KategoriEkle","Admin")">Ekle+</a>
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Kategori Adı</th>
+                <th>Kategori Açıklama</th>
+                <th>Güncelle</th>
+                <th>Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Kategoriler item in Model)
+            {
+                <tr>
+                    <td>@item.KategoriAdi</td>
+                    <td>@item.KategoriAciklama</td>
+                    <td><a class="btn btn-warning" href="@Url.Action("KategoriDuzenle","Admin",new  {id=item.KategoriID })">Güncelle</a></td>
+                    <td>
+                        @Html.ActionLink("Delete", "KategoriSil", new { id = item.KategoriID }, new { @class = "btn btn-danger", onclick = "return confirm('Bu Kategoriyi Silmek İstediğinizden Emin Misin?');" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+

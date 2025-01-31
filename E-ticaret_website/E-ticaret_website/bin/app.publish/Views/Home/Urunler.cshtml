@@ -1,0 +1,138 @@
+﻿@using ElektronikMagazaWebsite.Controllers;
+@using EntityFrameworkLibrary;
+@using BusinessLibrary;
+@using ElektronikMagazaWebsite.Models;
+@model PageItem
+
+@{
+    ViewBag.Title = "Urunler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        <div class="col-12">
+            <nav class="breadcrumb bg-light mb-30">
+                <a class="breadcrumb-item text-dark" href="#">Anasayfa</a>
+                <a class="breadcrumb-item text-dark" href="#">@Model.kategori.KategoriAdi</a>
+                <span class="breadcrumb-item active">@Model.urun.UrunAdi</span>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container-fluid pb-5">
+    <div class="row px-xl-5">
+        <div class="col-lg-4 mb-30">
+            <div id="product-carousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner bg-light">
+
+                    <div class="carousel-item active">
+                        <img class="w-100 h-100" src="../@Model.urun.UrunResimUrl1" alt="Image">
+                    </div>
+                    @if (Model.urun.UrunResimUrl2 == null)
+                    {
+
+                    }
+                    else
+                    {
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="../@Model.urun.UrunResimUrl2" alt="Image">
+                        </div>
+                    }
+                    @if (Model.urun.UrunResimUrl3 == null)
+                    {
+
+                    }
+                    else
+                    {
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="../@Model.urun.UrunResimUrl3" alt="Image">
+                        </div>
+                    }
+               
+
+
+
+                </div>
+                <a class="carousel-control-prev" href="#product-carousel" data-slide="prev">
+                    <i class="fa fa-2x fa-angle-left text-dark"></i>
+                </a>
+                <a class="carousel-control-next" href="#product-carousel" data-slide="next">
+                    <i class="fa fa-2x fa-angle-right text-dark"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-8 h-auto mb-30">
+            <div class="h-100 bg-light p-30">
+                <h3>@Model.urun.UrunAdi</h3>
+                <div class="d-flex mb-3">
+                    <div class="text-primary mr-2">
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star-half-alt"></small>
+                        <small class="far fa-star"></small>
+                    </div>
+                    <small class="pt-1">(99 Reviews)</small>
+                </div>
+                <h3 class="font-weight-semi-bold mb-4">@Model.urun.UrunFiyat.ToString("C2") </h3>
+                <p class="mb-4">
+                    @Model.urun.UrunAltAciklama
+                </p>
+                <div class="d-flex align-items-center mb-4 pt-2">
+                    <div class="input-group quantity mr-3" style="width: 130px;">
+                        <div class="input-group-btn">
+                            <button class="btn btn-primary btn-minus" onclick="sepettenCikar(@Model.urun.UrunID)">
+                                <i class="fa fa-minus"></i>
+                            </button>
+                        </div>
+                        <input type="text" class="form-control bg-secondary border-0 text-center" value="1">
+                        <div class="input-group-btn">
+                            <button class="btn btn-primary btn-plus" onclick="sepeteEkle(@Model.urun.UrunID)">
+                                <i class="fa fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary px-3" onclick="sepeteEkle(@Model.urun.UrunID)">
+                        <i class="fa fa-shopping-cart mr-1"></i> Sepete Ekle
+                    </button>
+                </div>
+                <div class="d-flex pt-2">
+                    <strong class="text-dark mr-2">Share on:</strong>
+                    <div class="d-inline-flex">
+                        <a class="text-dark px-2" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-dark px-2" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-dark px-2" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-dark px-2" href="">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row px-xl-5">
+        <div class="col">
+            <div class="bg-light p-30">
+                <div class="nav nav-tabs mb-4">
+                    <a class="nav-item nav-link text-dark active" data-toggle="tab" href="#tab-pane-1">Ürün Özellikleri</a>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="tab-pane-1">
+                        <h4 class="mb-3">Ürün Özellikleri</h4>
+                        <p>@Html.Raw(Model.urun.UrunAciklama)</p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

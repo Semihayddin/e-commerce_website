@@ -1,0 +1,50 @@
+﻿@using EntityFrameworkLibrary;
+@using BusinessLibrary;
+@using ElektronikMagazaWebsite.Controllers;
+@using ElektronikMagazaWebsite.ViewModel;
+
+@model AdminSiparisler
+@{
+    ViewBag.Title = "SiparisIncele";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div id="content" class="p-4 p-md-5 pt-5">
+    <h2 class="mb-1">Siparişler</h2>
+    <form action="/Admin/SiparisIncele/@Model.Liste.FirstOrDefault().SiparisKartID" method="get">
+        <div class="d-flex">
+            @Html.TextBoxFor(a => a.Aranan, new { @class = "form-control ", @type = "text", @name = "Aranan", @style = "width:50%;border:1px solid black !important" })
+            <button type="submit" class="btn btn-danger">Ara</button>
+        </div>
+        <table id="example" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Sipariş Hareket ID</th>
+                    <th>Sipariş Hareket Fiyatı</th>
+                    <th>Sipariş Hareket Miktarı</th>
+                    <th>Sipariş Hareket Tutarı</th>
+                    <th>Sipariş Hareket Ürün Adı</th>
+                    <th>Sipariş Tarihi</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (SiparisHareket item in Model.hareketListe)
+                {
+                    <tr>
+                        <td class="text-left" style="padding:0.3rem !important">@item.SipHarID</td>
+                        <td class="text-left" style="padding:0.3rem !important">@item.SipHarFiyat</td>
+                        <td class="text-left" style="padding:0.3rem !important">@item.SipHarMiktar</td>
+                        <td class="text-left" style="padding:0.3rem !important">@item.SipHarTutar</td>
+                        <td class="text-left" style="padding:0.3rem !important">@item.SipHarUrunAdi</td>
+                        <td class="text-left" style="padding:0.3rem !important">@item.SipHarTarih</td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <span>Filtre Sonucu Oluşan Toplam Tutar : @Model.hareketListe.Sum(x => x.SipHarTutar)  </span><br />
+        <span>@Model.hareketListe.Count(x => x.SipHarID > 0)  Kayıt Bulundu</span>
+    </form>
+</div>
+

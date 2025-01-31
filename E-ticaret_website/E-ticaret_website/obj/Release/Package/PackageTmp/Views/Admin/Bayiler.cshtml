@@ -1,0 +1,41 @@
+﻿@using EntityFrameworkLibrary;
+@using BusinessLibrary;
+@using ElektronikMagazaWebsite.Controllers;
+
+@model List<Bayiler>
+
+@{
+    ViewBag.Title = "Bayiler";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div id="content" class="p-4 p-md-5 pt-5">
+    <h2 class="mb-1">Bayiler</h2>
+    <a class="btn btn-success text-white float-right mb-4" href="@Url.Action("BayiEkle","Admin")">Ekle+</a>
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Bayi Kodu</th>
+                <th>Bayi Unvanı</th>
+                <th>Güncelle</th>
+                <th>Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Bayiler item in Model)
+            {
+                <tr>
+                    <td>@item.BayiKod</td>
+                    <td>@item.BayiUnvan</td>
+                    <td><a class="btn btn-warning" href="@Url.Action("BayiDuzenle","Admin",new  {id=item.BayiID })">Güncelle</a></td>
+                    <td>
+                        @Html.ActionLink("Delete", "BayiSil", new { id = item.BayiID }, new { @class = "btn btn-danger", onclick = "return confirm('Bu Bayiyi Silmek İstediğinizden Emin Misin?');" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+

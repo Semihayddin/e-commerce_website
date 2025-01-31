@@ -1,0 +1,151 @@
+﻿@using EntityFrameworkLibrary;
+@using BusinessLibrary;
+@using ElektronikMagazaWebsite.Controllers;
+@using ElektronikMagazaWebsite.Models;
+
+@model PageItem
+@{
+    ViewBag.Title = "UrunDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div id="content" class="p-4 p-md-5 pt-5" style="background-color: lightgray;">
+    @using (Html.BeginForm("UrunIslem", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {@*<form class="form-group" method="post" action="@Url.Action("BlogIslem","Admin")">*@
+    <div class="form-group row">
+        <label for="UrunAdi" class="col-4 col-form-label">Ürün Adı</label>
+        <div class="col-8">
+            <input class="form-control" type="hidden" id="UrunID" name="UrunID" placeholder="" value="@Model.urun.UrunID" />
+            @*@Html.TextBoxFor(m => m.urun, new { @class = "form-control", @id = "baslik",name= "UrunAdi" })*@
+            <input class="form-control" id="UrunAdi" name="UrunAdi" placeholder="Ürünün Adını Giriniz" value="@Model.urun.UrunAdi" />
+
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="Katid" class="col-4 col-form-label">Ürünün Bağlı Olduğu Kategori</label>
+        <div class="col-8">
+            <select id="select" name="Katid" class="custom-select">
+                <option value="0">Seçiniz..</option>
+                @foreach (var item in Model.kategoriler)
+                {
+                    <option value="@item.KategoriID" name="Katid" @(Model.urun.katid == item.KategoriID ? "selected" : "")>@item.KategoriAdi</option>
+                }
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="UrunAciklama" class="col-4 col-form-label">Ürün Açıklaması</label>
+        <div class="col-8">
+
+            @*@Html.TextBoxFor(m => m.urun, new { @class = "form-control", @id = "baslik",name= "UrunAdi" })*@
+            <textarea class="form-control" id="summernote" name="UrunAciklama" placeholder="Ürünün Açıklamasını Giriniz">@Model.urun.UrunAciklama</textarea>
+
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="UrunAltAciklama" class="col-4 col-form-label">Ürün Alt Açıklama</label>
+        <div class="col-8">
+
+            <input class="form-control" id="UrunAltAciklama" name="UrunAltAciklama" placeholder="Ürünün Alt Açıklamasını Giriniz" value="@Model.urun.UrunAltAciklama" />
+
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="UrunFiyat" class="col-4 col-form-label">Ürün Fiyatı</label>
+        <div class="col-8">
+
+            <input class="form-control" id="UrunFiyat" name="UrunFiyat" type="text" placeholder="Ürünün Fiyatını Giriniz" value="@Model.urun.UrunFiyat" />
+
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="UrunBayiFiyat" class="col-4 col-form-label">Ürün Bayi Fiyatı</label>
+        <div class="col-8">
+
+            <input class="form-control" id="UrunBayiFiyat" name="UrunBayiFiyat" type="text" placeholder="Ürünün Bayi Fiyatını Giriniz" value="@Model.urun.UrunBayiFiyat" />
+
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="UrunPopuler" class="col-4 col-form-label">Ürün Popüler</label>
+        <div class="col-8">
+
+            @Html.CheckBox("UrunPopuler", Convert.ToBoolean(Model.urun.UrunPopuler), new { @class = "form-control" })
+
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="UrunYeni" class="col-4 col-form-label">Yeni Ürün</label>
+        <div class="col-8">
+
+            @Html.CheckBox("UrunYeni", Convert.ToBoolean(Model.urun.UrunYeni), new { @class = "form-control" })
+
+        </div>
+    </div>
+
+
+    <div class="form-group row">
+        @Html.HiddenFor(x => x.urun.UrunID, new { @name = "UrunResimUrl1" })
+        <label for="UrunResimUrl1" class="col-4 col-form-label">Ürün Resmi 1 (570px X 419px Olmalıdır!)</label>
+        <div class="col-8">
+
+            <input type="file" name="urunResimFile1" id="urunResimFile1" />
+            <img style="width:745px;" src="@Url.Content("~/"+Model.urun.UrunResimUrl1.Replace("../",""))" alt="@Model.urun.UrunAdi" />
+            <input type="hidden" id="UrunResimUrl1" name="UrunResimUrl1" value="@Model.urun.UrunResimUrl1" />
+        </div>
+    </div>
+    <div class="form-group row">
+        @Html.HiddenFor(x => x.urun.UrunID, new { @name = "UrunResimUrl2" })
+        <label for="UrunResimUrl2" class="col-4 col-form-label">Ürünün 2. Resmi</label>
+        <div class="col-8">
+
+            <input type="file" name="urunResimFile2" id="urunResimFile2" />
+            <img style="width:745px;" src="@Url.Content("~/"+Model.urun.UrunResimUrl2.Replace("../",""))" alt="@Model.urun.UrunAdi" />
+            <input type="hidden" id="UrunResimUrl2" name="UrunResimUrl2" value="@Model.urun.UrunResimUrl2" />
+        </div>
+    </div>
+    <div class="form-group row">
+        @Html.HiddenFor(x => x.urun.UrunID, new { @name = "UrunResimUrl3" })
+        <label for="UrunResimUrl3" class="col-4 col-form-label">Ürünün 3. Resmi</label>
+        <div class="col-8">
+
+            <input type="file" name="urunResimFile3" id="urunResimFile3" />
+            <img style="width:745px;" src="@Url.Content("~/"+Model.urun.UrunResimUrl3.Replace("../",""))" alt="@Model.urun.UrunAdi" />
+            <input type="hidden" id="UrunResimUrl3" name="UrunResimUrl3" value="@Model.urun.UrunResimUrl3" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="offset-4 col-8">
+            <button name="submit" type="submit" class="btn btn-primary">Kaydet</button>
+        </div>
+    </div>
+}
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#baslik").live("keyup", function () {
+
+            str = $(this).val();
+            str = replaceSpecialChars(str);
+            str = str.toLowerCase();
+
+            function replaceSpecialChars(str) {
+                var specialChars = [["ş", "s"], ["ğ", "g"], ["ü", "u"], ["ı", "i"], ["_", "-"],
+                ["ö", "o"], ["Ş", "S"], ["Ğ", "G"], ["Ç", "C"], ["ç", "c"],
+                ["Ü", "U"], ["İ", "I"], ["Ö", "O"], ["ş", "s"]];
+
+                for (var i = 0; i < specialChars.length; i++) {
+                    str = str.replace(eval("/" + specialChars[i][0] + "/ig"), specialChars[i][1]);
+                }
+                return str;
+            }
+            $("#baslik").val(str);
+        });
+    });
+
+</script>
+
+
+

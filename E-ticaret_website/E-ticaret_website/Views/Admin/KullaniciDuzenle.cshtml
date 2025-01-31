@@ -1,0 +1,66 @@
+﻿@using EntityFrameworkLibrary;
+@using BusinessLibrary;
+@using ElektronikMagazaWebsite.Controllers;
+@using ElektronikMagazaWebsite.Models;
+
+@{
+    ViewBag.Title = "KullaniciDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model PageItem
+
+
+<div id="content" class="p-4 p-md-5 pt-5" style="background-color: lightgray;">
+    @using (Html.BeginForm("KullaniciIslem", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <div class="form-group row">
+            <label for="KullaniciGrup" class="col-4 col-form-label">Kullanıcı Grubu</label>
+            <div class="col-8">
+                <input class="form-control" type="hidden" id="KullaniciID" name="KullaniciID" value="@Model.kullanici.KullaniciID" />
+                <select id="select" name="KullaniciGrup" class="custom-select">
+                   
+                    <option value="1" @(Model.kullanici.KullaniciGrup == 1 ? "selected" : "")>Admin</option>
+                    <option value="2" @(Model.kullanici.KullaniciGrup == 2 ? "selected" : "")>Son Kullanıcı</option>
+                    
+                </select>
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <label for="KullaniciMail" class="col-4 col-form-label">Kullanıcı Mail</label>
+            <div class="col-8">
+
+                <input class="form-control" id="KullaniciMail" name="KullaniciMail" required placeholder="Kullanıcı Mailini Giriniz" value="@Model.kullanici.KullaniciMail" />
+
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="KullaniciAdi" class="col-4 col-form-label">Kullanıcı Adı</label>
+            <div class="col-8">
+
+                <input class="form-control" id="KullaniciAdi" name="KullaniciAdi" placeholder="Kullanıcı Adını Giriniz" value="@Model.kullanici.KullaniciAdi" />
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="KullaniciSifre" class="col-4 col-form-label">Kullanıcı Şifre</label>
+            <div class="col-8">
+
+                <input class="form-control" id="KullaniciSifre" name="KullaniciSifre" placeholder="Kullanıcı Şifresini Giriniz" value="@Model.kullanici.KullaniciSifre" />
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="offset-4 col-8">
+                <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+
+

@@ -1,0 +1,330 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|c:\\users\\semih\\desktop\\elektronikmagazawebsite\\elektronikmagazawebsite\\elektronikmagazawebsite\\viewmodel\\sepetmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|solutionrelative:elektronikmagazawebsite\\viewmodel\\sepetmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|c:\\users\\semih\\desktop\\elektronikmagazawebsite\\elektronikmagazawebsite\\elektronikmagazawebsite\\sepet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|solutionrelative:elektronikmagazawebsite\\sepet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|c:\\users\\semih\\desktop\\elektronikmagazawebsite\\elektronikmagazawebsite\\elektronikmagazawebsite\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|solutionrelative:elektronikmagazawebsite\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|c:\\users\\semih\\desktop\\elektronikmagazawebsite\\elektronikmagazawebsite\\elektronikmagazawebsite\\viewmodel\\adminsiparisler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|solutionrelative:elektronikmagazawebsite\\viewmodel\\adminsiparisler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|c:\\users\\semih\\desktop\\elektronikmagazawebsite\\elektronikmagazawebsite\\elektronikmagazawebsite\\views\\home\\urunler.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|solutionrelative:elektronikmagazawebsite\\views\\home\\urunler.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|c:\\users\\semih\\desktop\\elektronikmagazawebsite\\elektronikmagazawebsite\\elektronikmagazawebsite\\views\\admin\\urunler.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|solutionrelative:elektronikmagazawebsite\\views\\admin\\urunler.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|c:\\users\\semih\\desktop\\elektronikmagazawebsite\\elektronikmagazawebsite\\elektronikmagazawebsite\\startup.auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|solutionrelative:elektronikmagazawebsite\\startup.auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|c:\\users\\semih\\desktop\\elektronikmagazawebsite\\elektronikmagazawebsite\\elektronikmagazawebsite\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|solutionrelative:elektronikmagazawebsite\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|c:\\users\\semih\\desktop\\elektronikmagazawebsite\\elektronikmagazawebsite\\elektronikmagazawebsite\\views\\admin\\urunduzenle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|solutionrelative:elektronikmagazawebsite\\views\\admin\\urunduzenle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|c:\\users\\semih\\desktop\\elektronikmagazawebsite\\elektronikmagazawebsite\\elektronikmagazawebsite\\views\\admin\\urunekle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|solutionrelative:elektronikmagazawebsite\\views\\admin\\urunekle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|c:\\users\\semih\\desktop\\elektronikmagazawebsite\\elektronikmagazawebsite\\elektronikmagazawebsite\\views\\admin\\kategoriduzenle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|solutionrelative:elektronikmagazawebsite\\views\\admin\\kategoriduzenle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|c:\\users\\semih\\desktop\\elektronikmagazawebsite\\elektronikmagazawebsite\\elektronikmagazawebsite\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|solutionrelative:elektronikmagazawebsite\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|c:\\users\\semih\\desktop\\elektronikmagazawebsite\\elektronikmagazawebsite\\elektronikmagazawebsite\\views\\security\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|solutionrelative:elektronikmagazawebsite\\views\\security\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|c:\\users\\semih\\desktop\\elektronikmagazawebsite\\elektronikmagazawebsite\\elektronikmagazawebsite\\views\\security\\uyelogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|solutionrelative:elektronikmagazawebsite\\views\\security\\uyelogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|c:\\users\\semih\\desktop\\elektronikmagazawebsite\\elektronikmagazawebsite\\elektronikmagazawebsite\\views\\admin\\kullaniciduzenle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|solutionrelative:elektronikmagazawebsite\\views\\admin\\kullaniciduzenle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|c:\\users\\semih\\desktop\\elektronikmagazawebsite\\elektronikmagazawebsite\\elektronikmagazawebsite\\views\\admin\\raporlar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|solutionrelative:elektronikmagazawebsite\\views\\admin\\raporlar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|c:\\users\\semih\\desktop\\elektronikmagazawebsite\\elektronikmagazawebsite\\elektronikmagazawebsite\\views\\admin\\satisraporlar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|solutionrelative:elektronikmagazawebsite\\views\\admin\\satisraporlar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|c:\\users\\semih\\desktop\\elektronikmagazawebsite\\elektronikmagazawebsite\\elektronikmagazawebsite\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF7B358D-C119-42B3-8D93-CF956D2EBD89}|ElektronikMagazaWebsite\\ElektronikMagazaWebsite.csproj|solutionrelative:elektronikmagazawebsite\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SepetModel.cs",
+              "DocumentMoniker": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ViewModel\\SepetModel.cs",
+              "RelativeDocumentMoniker": "ElektronikMagazaWebsite\\ViewModel\\SepetModel.cs",
+              "ToolTip": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ViewModel\\SepetModel.cs",
+              "RelativeToolTip": "ElektronikMagazaWebsite\\ViewModel\\SepetModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T10:38:22.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Sepet.cs",
+              "DocumentMoniker": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Sepet.cs",
+              "RelativeDocumentMoniker": "ElektronikMagazaWebsite\\Sepet.cs",
+              "ToolTip": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Sepet.cs",
+              "RelativeToolTip": "ElektronikMagazaWebsite\\Sepet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T10:38:10.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Urunler.cshtml",
+              "DocumentMoniker": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Home\\Urunler.cshtml",
+              "RelativeDocumentMoniker": "ElektronikMagazaWebsite\\Views\\Home\\Urunler.cshtml",
+              "ToolTip": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Home\\Urunler.cshtml",
+              "RelativeToolTip": "ElektronikMagazaWebsite\\Views\\Home\\Urunler.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-31T10:32:19.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Urunler.cshtml",
+              "DocumentMoniker": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Admin\\Urunler.cshtml",
+              "RelativeDocumentMoniker": "ElektronikMagazaWebsite\\Views\\Admin\\Urunler.cshtml",
+              "ToolTip": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Admin\\Urunler.cshtml",
+              "RelativeToolTip": "ElektronikMagazaWebsite\\Views\\Admin\\Urunler.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-31T10:32:15.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminSiparisler.cs",
+              "DocumentMoniker": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ViewModel\\AdminSiparisler.cs",
+              "RelativeDocumentMoniker": "ElektronikMagazaWebsite\\ViewModel\\AdminSiparisler.cs",
+              "ToolTip": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ViewModel\\AdminSiparisler.cs",
+              "RelativeToolTip": "ElektronikMagazaWebsite\\ViewModel\\AdminSiparisler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T08:42:57.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "ElektronikMagazaWebsite\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "ElektronikMagazaWebsite\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAwwHwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T08:41:42.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "KategoriDuzenle.cshtml",
+              "DocumentMoniker": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Admin\\KategoriDuzenle.cshtml",
+              "RelativeDocumentMoniker": "ElektronikMagazaWebsite\\Views\\Admin\\KategoriDuzenle.cshtml",
+              "ToolTip": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Admin\\KategoriDuzenle.cshtml",
+              "RelativeToolTip": "ElektronikMagazaWebsite\\Views\\Admin\\KategoriDuzenle.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAACXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T22:52:59.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UrunEkle.cshtml",
+              "DocumentMoniker": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Admin\\UrunEkle.cshtml",
+              "RelativeDocumentMoniker": "ElektronikMagazaWebsite\\Views\\Admin\\UrunEkle.cshtml",
+              "ToolTip": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Admin\\UrunEkle.cshtml",
+              "RelativeToolTip": "ElektronikMagazaWebsite\\Views\\Admin\\UrunEkle.cshtml",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAmwGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T22:58:44.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UrunDuzenle.cshtml",
+              "DocumentMoniker": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Admin\\UrunDuzenle.cshtml",
+              "RelativeDocumentMoniker": "ElektronikMagazaWebsite\\Views\\Admin\\UrunDuzenle.cshtml",
+              "ToolTip": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Admin\\UrunDuzenle.cshtml",
+              "RelativeToolTip": "ElektronikMagazaWebsite\\Views\\Admin\\UrunDuzenle.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T22:58:43.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "ElektronikMagazaWebsite\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "ElektronikMagazaWebsite\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T22:41:38.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Startup.Auth.cs",
+              "DocumentMoniker": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Startup.Auth.cs",
+              "RelativeDocumentMoniker": "ElektronikMagazaWebsite\\Startup.Auth.cs",
+              "ToolTip": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Startup.Auth.cs",
+              "RelativeToolTip": "ElektronikMagazaWebsite\\Startup.Auth.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T22:31:59.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Security\\Login.cshtml",
+              "RelativeDocumentMoniker": "ElektronikMagazaWebsite\\Views\\Security\\Login.cshtml",
+              "ToolTip": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Security\\Login.cshtml",
+              "RelativeToolTip": "ElektronikMagazaWebsite\\Views\\Security\\Login.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T22:57:43.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UyeLogin.cshtml",
+              "DocumentMoniker": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Security\\UyeLogin.cshtml",
+              "RelativeDocumentMoniker": "ElektronikMagazaWebsite\\Views\\Security\\UyeLogin.cshtml",
+              "ToolTip": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Security\\UyeLogin.cshtml",
+              "RelativeToolTip": "ElektronikMagazaWebsite\\Views\\Security\\UyeLogin.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T22:57:48.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "ElektronikMagazaWebsite\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "ElektronikMagazaWebsite\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T22:58:18.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "KullaniciDuzenle.cshtml",
+              "DocumentMoniker": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Admin\\KullaniciDuzenle.cshtml",
+              "RelativeDocumentMoniker": "ElektronikMagazaWebsite\\Views\\Admin\\KullaniciDuzenle.cshtml",
+              "ToolTip": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Admin\\KullaniciDuzenle.cshtml",
+              "RelativeToolTip": "ElektronikMagazaWebsite\\Views\\Admin\\KullaniciDuzenle.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T22:57:29.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Raporlar.cshtml",
+              "DocumentMoniker": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Admin\\Raporlar.cshtml",
+              "RelativeDocumentMoniker": "ElektronikMagazaWebsite\\Views\\Admin\\Raporlar.cshtml",
+              "ToolTip": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Admin\\Raporlar.cshtml",
+              "RelativeToolTip": "ElektronikMagazaWebsite\\Views\\Admin\\Raporlar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T22:41:08.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SatisRaporlar.cshtml",
+              "DocumentMoniker": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Admin\\SatisRaporlar.cshtml",
+              "RelativeDocumentMoniker": "ElektronikMagazaWebsite\\Views\\Admin\\SatisRaporlar.cshtml",
+              "ToolTip": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Views\\Admin\\SatisRaporlar.cshtml",
+              "RelativeToolTip": "ElektronikMagazaWebsite\\Views\\Admin\\SatisRaporlar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T22:41:07.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Startup.cs",
+              "RelativeDocumentMoniker": "ElektronikMagazaWebsite\\Startup.cs",
+              "ToolTip": "C:\\Users\\semih\\Desktop\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\ElektronikMagazaWebsite\\Startup.cs",
+              "RelativeToolTip": "ElektronikMagazaWebsite\\Startup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T22:30:21.133Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

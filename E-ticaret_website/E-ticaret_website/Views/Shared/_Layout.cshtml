@@ -1,0 +1,380 @@
+﻿@using ElektronikMagazaWebsite.Controllers;
+@using EntityFrameworkLibrary;
+@using BusinessLibrary;
+@using ElektronikMagazaWebsite.Models;
+@model PageItem
+@{
+    var listeKategori = UiData.GetKategoriler();
+    List<Kategoriler> altKat = new List<Kategoriler>();
+
+    var sepet = SepetLib.getSepet();
+}
+
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>S&amp;R Digitalization Solutions</title>
+    <link rel="icon" href="~/assets/images/favicon.jpg"/>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="~/assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="~/assets/css/templatemo-hexashop.css">
+
+    <link rel="stylesheet" href="~/assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="~/assets/css/lightbox.css">
+
+</head>
+
+<body>
+
+   
+  
+    <header class="header-area header-sticky">
+      
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="/" class="logo" style="margin-left: -160px;">
+                            <img src="../assets/images/logoüst.jpg" style="width: 80%; height: auto;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="/" class="active">Anasayfa</a></li>
+                            <li class="submenu">
+                                <a href="javascript:;">Kategoriler</a>
+                                <ul>
+                                    @foreach (var item in listeKategori)
+                                    {
+                                        <li><a href="/kategoriler/@UrlHelper_.FriendlyURLTitle(@item.KategoriAdi)-@item.KategoriID">@item.KategoriAdi</a></li>
+                                    }
+
+
+                                </ul>
+                            </li>
+
+
+
+
+                            <li class="scroll-to-section"><a href="/iletisim">İletişim</a></li>
+                            <li class="scroll-to-section position-relative">
+                                <a href="/sepet">Sepet <i class="fa fa-shopping-cart"></i></a>
+                                <span class="badge badge-pill badge-danger position-absolute" style="top: 2px; right: 5px; padding: .20em .3em !important; font-size: 65% !important;">@sepet.toplamsepetMiktar</span>
+                            </li>
+                            <li class="scroll-to-section position-relative d-flex align-items-center">
+                                <div class="user-info d-flex align-items-center" style="margin-left: 20px;">
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <div class="dropdown">
+                                            <a href="#" class="d-flex align-items-center text-decoration-none" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa fa-user fa-lg" style="font-size: 1.5rem; margin-right: 8px;"></i>
+                                                <span style="font-size: 0.9em; font-weight: 500;">@Kullanici.getKullanici.kulAdi</span>
+
+                                            </a>
+
+                                        </div>
+                                    }
+                                    else
+                                    {
+
+                                        <a href="/Security/UyeLogin" class="btn btn-sm btn-light" aria-expanded="false"><i class="fa fa-user fa-lg" style="font-size: 1.5rem; margin-right: 8px;"></i></a>
+                                    }
+                                </div>
+                            </li>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <li class="scroll-to-section">
+                                    <a href="/Security/Logout">
+                                        <i style="font-size:20px" class="fa fa-power-off me-2"></i>
+                                    </a>
+                                </li>
+                            }
+                           
+
+                            </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    @RenderBody()
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="first-item">
+                        <div class="logo">
+                            <img src="../assets/images/logoalt.jpg" alt="S&R Market">
+                        </div>
+                        <ul>
+                            <li><a href="#">ÇÜ Bilgisayar müh. Balcalı Sarıçam Adana, 01330 Sarıçam/Adana</a></li>
+                            <li><a href="#">info@semirenk.com</a></li>
+                            <li><a href="#">+90 (555) 555 55 55</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Kategoriler</h4>
+                    <ul>
+                        @foreach (var item in listeKategori)
+                        {
+                            <li><a href="/kategoriler/@UrlHelper_.FriendlyURLTitle(@item.KategoriAdi)-@item.KategoriID">@item.KategoriAdi</a></li>
+
+                        }
+
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Hızlı Menü</h4>
+                    <ul>
+                        <li><a href="/">Anasayfa</a></li>
+                        
+                        <li><a href="/sepet">Sepet</a></li>
+                        <li><a href="/iletisim">İletişim</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="under-footer">
+                        <p>
+                            Tüm Hakları Saklıdır
+
+
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="~/assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="~/assets/js/popper.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="~/assets/js/owl-carousel.js"></script>
+    <script src="~/assets/js/accordions.js"></script>
+    <script src="~/assets/js/datepicker.js"></script>
+    <script src="~/assets/js/scrollreveal.min.js"></script>
+    <script src="~/assets/js/waypoints.min.js"></script>
+    <script src="~/assets/js/jquery.counterup.min.js"></script>
+    <script src="~/assets/js/imgfix.min.js"></script>
+    <script src="~/assets/js/slick.js"></script>
+    <script src="~/assets/js/lightbox.js"></script>
+    <script src="~/assets/js/isotope.js"></script>
+    <script src="../js/sweetalert2.all.min.js"></script>
+    <!-- Global Init -->
+    <script src="~/assets/js/custom.js"></script>
+    <script type="text/javascript">
+
+        function sepeteEkle(urunId) {
+            $.ajax({
+                type: 'GET',
+                url: "/sepeteekle/" + urunId,
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+                success: function (data) {
+                    if (data != null && data != undefined) {
+                        console.log(data);
+
+                        
+                        if (typeof Ui.Toast === 'function') {
+                            Ui.Toast('Ürün Sepete Eklendi', 1000);
+
+                          
+                            setTimeout(function () {
+                                location.reload();
+                            }, 1000);
+                        } else {
+                            console.error('Ui.Toast fonksiyonu bulunamadı.');
+                            alert('Ürün Sepete Eklendi, ancak Ui.Toast fonksiyonu bulunamadı.');
+
+                            
+                            setTimeout(function () {
+                                location.reload();
+                            }, 2000);
+                        }
+                    } else {
+                        alert('HATA');
+                    }
+                },
+                error: function (errorText) {
+                    alert(errorText);
+                }
+            });
+            return false;
+        }
+
+
+        function sepettenCikar(urunId) {
+            $.ajax({
+                type: 'GET',
+                url: "/sepettencikar/" + urunId,
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+                success: function (data) {
+                    if (data != null && data != undefined) {
+                        console.log(data);
+
+                        
+                        if (typeof Ui.Toast === 'function') {
+                            Ui.Toast('Ürün Sepetten Çıkarıldı', 1000);
+
+                           
+                            setTimeout(function () {
+                                location.reload();
+                            }, 1000);
+                        } else {
+                            console.error('Ui.Toast fonksiyonu bulunamadı.');
+                            alert('Ürün Sepetten Çıkarıldı, ancak Ui.Toast fonksiyonu bulunamadı.');
+
+                           
+                            setTimeout(function () {
+                                location.reload();
+                            }, 2000);
+                        }
+                    } else {
+                        alert('HATA');
+                    }
+                },
+                error: function (errorText) {
+                    alert(errorText);
+                }
+            });
+            return false;
+        }
+        function sepettenSil(urunId) {
+
+            Swal.fire({
+                position: 'top', title: 'Seçili Ürün veya Ürünler Sepetten Çıkarılacaktır Emin Misiniz?', icon: 'warning', showCancelButton: true, confirmButtonText: 'EVET', cancelButtonText: 'HAYIR'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        type: 'GET',
+                        url: "/sepettensil/" + urunId,
+                        contentType: 'application/json;charset=utf-8',
+                        dataType: 'json',
+                        success: function (data) {
+                            if (data != null && data != undefined) {
+                                console.log(data);
+                                location.reload();
+
+                            }
+                            else {
+                                alert('HATA');
+                            }
+                        }, error: function (errorText) {
+                            alert(errorText);
+                        }
+                    });
+                    return false;
+
+                }
+            })
+        };
+        function sepetKaydet() {
+
+            $.ajax({
+                type: 'POST',
+                url: "/SepetKaydet",
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+
+                success: function (data) {
+                    if (data != null && data != undefined) {
+                        console.log(data);
+
+                        
+                        if (typeof Ui.Toast === 'function') {
+                            Ui.Toast('Sipariş Başarıyla Oluşturuldu', 1000);
+
+                            
+                            setTimeout(function () {
+                                location.reload();
+                            }, 1000);
+                        } else {
+                            console.error('Ui.Toast fonksiyonu bulunamadı.');
+                            alert('Ürün Sepete Eklendi, ancak Ui.Toast fonksiyonu bulunamadı.');
+
+                            
+                            setTimeout(function () {
+                                location.reload();
+                            }, 2000);
+                        }
+                    } else {
+                        alert('HATA');
+                    }
+                },
+                error: function (errorText) {
+                    alert(errorText);
+                }
+            });
+            return false;
+        }
+
+        var Ui = {
+            Toast: function (mesaj, sure = 2000) {
+                return Swal.fire({
+                    toast: true,
+                    icon: 'success',
+                    title: mesaj,
+                    animation: false,
+                    position: 'top-right',
+                    showConfirmButton: false,
+                    timer: sure,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                });
+            }
+        };
+
+
+    </script>
+    <script>
+
+        $(function () {
+            var selectedClass = "";
+            $("p").click(function () {
+                selectedClass = $(this).attr("data-rel");
+                $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("." + selectedClass).fadeOut();
+                setTimeout(function () {
+                    $("." + selectedClass).fadeIn();
+                    $("#portfolio").fadeTo(50, 1);
+                }, 500);
+
+            });
+        });
+
+    </script>
+
+</body>
+</html>
+

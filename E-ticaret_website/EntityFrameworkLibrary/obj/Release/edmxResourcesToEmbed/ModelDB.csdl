@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ElektronikMagazaDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ElektronikMagazaDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Kullanicilar" EntityType="ElektronikMagazaDBModel.Kullanicilar" />
+    <EntitySet Name="Urunler" EntityType="ElektronikMagazaDBModel.Urunler" />
+    <EntitySet Name="Kategoriler" EntityType="ElektronikMagazaDBModel.Kategoriler" />
+    <EntitySet Name="SiparisKart" EntityType="ElektronikMagazaDBModel.SiparisKart" />
+    <EntitySet Name="Bayiler" EntityType="ElektronikMagazaDBModel.Bayiler" />
+    <EntitySet Name="SiparisHareket" EntityType="ElektronikMagazaDBModel.SiparisHareket" />
+  </EntityContainer>
+  <EntityType Name="Kullanicilar">
+    <Key>
+      <PropertyRef Name="KullaniciID" />
+    </Key>
+    <Property Name="KullaniciID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullaniciGrup" Type="Int32" Nullable="false" />
+    <Property Name="KullaniciBayiId" Type="Int32" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciSifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Urunler">
+    <Key>
+      <PropertyRef Name="UrunID" />
+    </Key>
+    <Property Name="UrunID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="katid" Type="Int32" />
+    <Property Name="UrunAdi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="UrunAciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UrunAltAciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UrunFiyat" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="UrunBayiFiyat" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="UrunResimUrl1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="UrunResimUrl2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="UrunResimUrl3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="UrunPopuler" Type="Boolean" />
+    <Property Name="UrunYeni" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Kategoriler">
+    <Key>
+      <PropertyRef Name="KategoriID" />
+    </Key>
+    <Property Name="KategoriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KatUstID" Type="Int32" />
+    <Property Name="KategoriAdi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="KategoriAciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KategoriResimUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="KatPopuler" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="SiparisKart">
+    <Key>
+      <PropertyRef Name="SiparisKartID" />
+    </Key>
+    <Property Name="SiparisKartID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bayiID" Type="Int32" />
+    <Property Name="bayiKod" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="bayiUnvan" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SiparisKartTutar" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SiparisKartTarih" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Bayiler">
+    <Key>
+      <PropertyRef Name="BayiID" />
+    </Key>
+    <Property Name="BayiID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BayiKod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BayiUnvan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BayiBakiye" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="BayiYetkiliKisi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BayiSifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SiparisHareket">
+    <Key>
+      <PropertyRef Name="SipHarID" />
+    </Key>
+    <Property Name="SipHarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="siparisKartID" Type="Int32" />
+    <Property Name="SipHarTarih" Type="DateTime" Precision="3" />
+    <Property Name="SipHarMiktar" Type="Int32" />
+    <Property Name="SipHarFiyat" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SipHarTutar" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SipHarUrunID" Type="Int32" />
+    <Property Name="SipHarUrunAdi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

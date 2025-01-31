@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ElektronikMagazaDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bayiler">
+    <Key>
+      <PropertyRef Name="BayiID" />
+    </Key>
+    <Property Name="BayiID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BayiKod" Type="nvarchar" MaxLength="50" />
+    <Property Name="BayiUnvan" Type="nvarchar" MaxLength="100" />
+    <Property Name="BayiBakiye" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="BayiYetkiliKisi" Type="nvarchar" MaxLength="100" />
+    <Property Name="BayiSifre" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Kategoriler">
+    <Key>
+      <PropertyRef Name="KategoriID" />
+    </Key>
+    <Property Name="KategoriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KatUstID" Type="int" />
+    <Property Name="KategoriAdi" Type="nvarchar" MaxLength="200" />
+    <Property Name="KategoriAciklama" Type="nvarchar(max)" />
+    <Property Name="KategoriResimUrl" Type="nvarchar" MaxLength="200" />
+    <Property Name="KatPopuler" Type="bit" />
+  </EntityType>
+  <EntityType Name="Kullanicilar">
+    <Key>
+      <PropertyRef Name="KullaniciID" />
+    </Key>
+    <Property Name="KullaniciID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KullaniciGrup" Type="int" Nullable="false" />
+    <Property Name="KullaniciBayiId" Type="int" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="KullaniciMail" Type="nvarchar" MaxLength="50" />
+    <Property Name="KullaniciSifre" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SiparisHareket">
+    <Key>
+      <PropertyRef Name="SipHarID" />
+    </Key>
+    <Property Name="SipHarID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="siparisKartID" Type="int" />
+    <Property Name="SipHarTarih" Type="datetime" />
+    <Property Name="SipHarMiktar" Type="int" />
+    <Property Name="SipHarFiyat" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="SipHarTutar" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="SipHarUrunID" Type="int" />
+    <Property Name="SipHarUrunAdi" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="SiparisKart">
+    <Key>
+      <PropertyRef Name="SiparisKartID" />
+    </Key>
+    <Property Name="SiparisKartID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bayiID" Type="int" />
+    <Property Name="bayiKod" Type="nvarchar" MaxLength="200" />
+    <Property Name="bayiUnvan" Type="nvarchar" MaxLength="200" />
+    <Property Name="SiparisKartTutar" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="SiparisKartTarih" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Urunler">
+    <Key>
+      <PropertyRef Name="UrunID" />
+    </Key>
+    <Property Name="UrunID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="katid" Type="int" />
+    <Property Name="UrunAdi" Type="nvarchar" MaxLength="200" />
+    <Property Name="UrunAciklama" Type="nvarchar(max)" />
+    <Property Name="UrunAltAciklama" Type="nvarchar(max)" />
+    <Property Name="UrunFiyat" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="UrunBayiFiyat" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="UrunResimUrl1" Type="nvarchar" MaxLength="200" />
+    <Property Name="UrunResimUrl2" Type="nvarchar" MaxLength="200" />
+    <Property Name="UrunResimUrl3" Type="nvarchar" MaxLength="200" />
+    <Property Name="UrunPopuler" Type="bit" />
+    <Property Name="UrunYeni" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="ElektronikMagazaDBModelStoreContainer">
+    <EntitySet Name="Bayiler" EntityType="Self.Bayiler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kategoriler" EntityType="Self.Kategoriler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kullanicilar" EntityType="Self.Kullanicilar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SiparisHareket" EntityType="Self.SiparisHareket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SiparisKart" EntityType="Self.SiparisKart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Urunler" EntityType="Self.Urunler" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

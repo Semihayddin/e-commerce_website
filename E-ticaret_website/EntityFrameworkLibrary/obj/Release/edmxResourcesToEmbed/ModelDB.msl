@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ElektronikMagazaDBModelStoreContainer" CdmEntityContainer="ElektronikMagazaDBEntities">
+    <EntitySetMapping Name="Kullanicilar">
+      <EntityTypeMapping TypeName="ElektronikMagazaDBModel.Kullanicilar">
+        <MappingFragment StoreEntitySet="Kullanicilar">
+          <ScalarProperty Name="KullaniciSifre" ColumnName="KullaniciSifre" />
+          <ScalarProperty Name="KullaniciMail" ColumnName="KullaniciMail" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="KullaniciBayiId" ColumnName="KullaniciBayiId" />
+          <ScalarProperty Name="KullaniciGrup" ColumnName="KullaniciGrup" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Urunler">
+      <EntityTypeMapping TypeName="ElektronikMagazaDBModel.Urunler">
+        <MappingFragment StoreEntitySet="Urunler">
+          <ScalarProperty Name="UrunYeni" ColumnName="UrunYeni" />
+          <ScalarProperty Name="UrunPopuler" ColumnName="UrunPopuler" />
+          <ScalarProperty Name="UrunResimUrl3" ColumnName="UrunResimUrl3" />
+          <ScalarProperty Name="UrunResimUrl2" ColumnName="UrunResimUrl2" />
+          <ScalarProperty Name="UrunResimUrl1" ColumnName="UrunResimUrl1" />
+          <ScalarProperty Name="UrunBayiFiyat" ColumnName="UrunBayiFiyat" />
+          <ScalarProperty Name="UrunFiyat" ColumnName="UrunFiyat" />
+          <ScalarProperty Name="UrunAltAciklama" ColumnName="UrunAltAciklama" />
+          <ScalarProperty Name="UrunAciklama" ColumnName="UrunAciklama" />
+          <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
+          <ScalarProperty Name="katid" ColumnName="katid" />
+          <ScalarProperty Name="UrunID" ColumnName="UrunID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategoriler">
+      <EntityTypeMapping TypeName="ElektronikMagazaDBModel.Kategoriler">
+        <MappingFragment StoreEntitySet="Kategoriler">
+          <ScalarProperty Name="KatPopuler" ColumnName="KatPopuler" />
+          <ScalarProperty Name="KategoriResimUrl" ColumnName="KategoriResimUrl" />
+          <ScalarProperty Name="KategoriAciklama" ColumnName="KategoriAciklama" />
+          <ScalarProperty Name="KategoriAdi" ColumnName="KategoriAdi" />
+          <ScalarProperty Name="KatUstID" ColumnName="KatUstID" />
+          <ScalarProperty Name="KategoriID" ColumnName="KategoriID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiparisKart">
+      <EntityTypeMapping TypeName="ElektronikMagazaDBModel.SiparisKart">
+        <MappingFragment StoreEntitySet="SiparisKart">
+          <ScalarProperty Name="SiparisKartTarih" ColumnName="SiparisKartTarih" />
+          <ScalarProperty Name="SiparisKartTutar" ColumnName="SiparisKartTutar" />
+          <ScalarProperty Name="bayiUnvan" ColumnName="bayiUnvan" />
+          <ScalarProperty Name="bayiKod" ColumnName="bayiKod" />
+          <ScalarProperty Name="bayiID" ColumnName="bayiID" />
+          <ScalarProperty Name="SiparisKartID" ColumnName="SiparisKartID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bayiler">
+      <EntityTypeMapping TypeName="ElektronikMagazaDBModel.Bayiler">
+        <MappingFragment StoreEntitySet="Bayiler">
+          <ScalarProperty Name="BayiSifre" ColumnName="BayiSifre" />
+          <ScalarProperty Name="BayiYetkiliKisi" ColumnName="BayiYetkiliKisi" />
+          <ScalarProperty Name="BayiBakiye" ColumnName="BayiBakiye" />
+          <ScalarProperty Name="BayiUnvan" ColumnName="BayiUnvan" />
+          <ScalarProperty Name="BayiKod" ColumnName="BayiKod" />
+          <ScalarProperty Name="BayiID" ColumnName="BayiID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiparisHareket">
+      <EntityTypeMapping TypeName="ElektronikMagazaDBModel.SiparisHareket">
+        <MappingFragment StoreEntitySet="SiparisHareket">
+          <ScalarProperty Name="SipHarUrunAdi" ColumnName="SipHarUrunAdi" />
+          <ScalarProperty Name="SipHarUrunID" ColumnName="SipHarUrunID" />
+          <ScalarProperty Name="SipHarTutar" ColumnName="SipHarTutar" />
+          <ScalarProperty Name="SipHarFiyat" ColumnName="SipHarFiyat" />
+          <ScalarProperty Name="SipHarMiktar" ColumnName="SipHarMiktar" />
+          <ScalarProperty Name="SipHarTarih" ColumnName="SipHarTarih" />
+          <ScalarProperty Name="siparisKartID" ColumnName="siparisKartID" />
+          <ScalarProperty Name="SipHarID" ColumnName="SipHarID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

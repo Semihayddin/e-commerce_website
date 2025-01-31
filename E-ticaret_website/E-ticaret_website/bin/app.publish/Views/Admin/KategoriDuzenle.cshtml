@@ -1,0 +1,91 @@
+﻿@using EntityFrameworkLibrary;
+@using BusinessLibrary;
+@using ElektronikMagazaWebsite.Controllers;
+@using ElektronikMagazaWebsite.Models;
+@{
+    ViewBag.Title = "KategoriDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model PageItem
+<div id="content" class="p-4 p-md-5 pt-5" style="background-color: lightgray;">
+    @using (Html.BeginForm("KategorilerIslem", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {@*<form class="form-group" method="post" action="@Url.Action("BlogIslem","Admin")">*@
+    <div class="form-group row">
+        <label for="KategoriAdi" class="col-4 col-form-label">Kategori Adı</label>
+        <div class="col-8">
+            <input class="form-control" type="hidden" id="KategoriID" name="KategoriID" placeholder="Kategori ID" value="@Model.kategori.KategoriID" />
+            @*@Html.TextBoxFor(m => m.urun, new { @class = "form-control", @id = "baslik",name= "UrunAdi" })*@
+            <input class="form-control" id="KategoriAdi" name="KategoriAdi" placeholder="Kategori Adını Girin" value="@Model.kategori.KategoriAdi" />
+
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="KategoriID" class="col-4 col-form-label">Alt Kategori</label>
+        <div class="col-8">
+            <select id="select" name="KategoriID" class="custom-select">
+                <option value="0">Ana Kategori</option>
+                @foreach (var item in Model.AdminDropDownKategoriler)
+                {
+                    <option value="@item.KatID" name="KatId" @(Model.kategori.KatUstID == item.KatID ? "selected" : "")>@item.KatAdi</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="KategoriAciklama" class="col-4 col-form-label">Kategori Açıklama</label>
+        <div class="col-8">
+            @*@Html.TextAreaFor(m => m.urun, new { @id = "summernote" ,name= "UrunAciklama" })*@
+            <textarea class="form-control" id="summernote" name="KategoriAciklama">@Model.kategori.KategoriAciklama</textarea>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="KatPopuler" class="col-4 col-form-label">Ana Menüde Göster</label>
+        <div class="col-8">
+            @Html.CheckBox("KatPopuler", Convert.ToBoolean(Model.kategori.KatPopuler), new { @class = "form-control" })
+        </div>
+    </div>
+    
+    <div class="form-group row">
+        @Html.HiddenFor(x => x.kategori.KategoriID, new { @name = "KategoriResimUrl" })
+        <label for="KategoriResimUrl" class="col-4 col-form-label">Kategori Resmi</label>
+        <div class="col-8">
+
+            <input type="file" name="katresimfile" id="katresimfile" />
+            <img style="width:745px;" src="@Url.Content("~/"+Model.kategori.KategoriResimUrl.Replace("../",""))" alt="@Model.kategori.KategoriAdi" />
+            <input type="hidden" id="KategoriResimUrl" name="KategoriResimUrl" value="@Model.kategori.KategoriResimUrl" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="offset-4 col-8">
+            <button name="submit" type="submit" class="btn btn-primary">Kaydet</button>
+        </div>
+    </div>
+}
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#baslik").live("keyup", function () {
+
+            str = $(this).val();
+            str = replaceSpecialChars(str);
+            str = str.toLowerCase();
+
+            function replaceSpecialChars(str) {
+                var specialChars = [["ş", "s"], ["ğ", "g"], ["ü", "u"], ["ı", "i"], ["_", "-"],
+                ["ö", "o"], ["Ş", "S"], ["Ğ", "G"], ["Ç", "C"], ["ç", "c"],
+                ["Ü", "U"], ["İ", "I"], ["Ö", "O"], ["ş", "s"]];
+
+                for (var i = 0; i < specialChars.length; i++) {
+                    str = str.replace(eval("/" + specialChars[i][0] + "/ig"), specialChars[i][1]);
+                }
+                return str;
+            }
+            $("#baslik").val(str);
+        });
+    });
+
+</script>
+
